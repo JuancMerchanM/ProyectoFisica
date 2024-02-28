@@ -1,0 +1,11 @@
+.root{
+    -fx-background-color: #060606;
+}
+
+.custom-button {
+    -fx-font-size: 14;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: "white";
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
