@@ -1,0 +1,19 @@
+Label {
+    -fx-alignment: top-left;
+    -fx-text-alignment: justify;
+    -fx-font: normal 14px "Times New Roman";
+    -fx-label-padding: 5px 10px;
+    -fx-wrap-text: true;
+    -fx-text-fill: #000000;   
+}
+
+VBox {
+    -fx-spacing: 10;
+    -fx-fill-width: true;
+    -fx-fill-height: true;
+    -fx-background-color: #ffffff;
+}
+
+.root{
+    -fx-background-color: #ffffff;
+}

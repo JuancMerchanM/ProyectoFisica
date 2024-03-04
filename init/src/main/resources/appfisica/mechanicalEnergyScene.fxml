@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appfisica.ControllerMechanicalEnergy">
+    <children>
+        <ScrollPane fx:id="scrollPaneContent" hbarPolicy="ALWAYS" hmax="250.0" hvalue="1.0" layoutX="16.0" layoutY="272.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="211.0" prefWidth="564.0" vbarPolicy="ALWAYS" vmax="1500.0" vvalue="1.0">
+            <content>
+                <VBox fx:id="vBoxContentScroll" alignment="CENTER" prefHeight="153.0" prefWidth="549.0">
+                    <children>
+                        <Label fx:id="contentLabel1" alignment="CENTER" text="Label" />
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+      <Pane layoutX="15.0" layoutY="21.0" prefHeight="232.0" prefWidth="564.0">
+         <children>
+            <Text layoutX="53.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Energia Potencial" wrappingWidth="124.01953125" />
+            <Text layoutX="53.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Energia Cinetica" wrappingWidth="124.01953125" />
+            <TextField fx:id="potentialTextField" layoutX="177.0" layoutY="73.0" />
+            <TextField fx:id="kineticTextField" layoutX="177.0" layoutY="104.0" />
+            <Text layoutX="53.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Energia Mecanica" wrappingWidth="124.01953125" />
+            <Button layoutX="349.0" layoutY="104.0" mnemonicParsing="false" onAction="#calcularEnergiaMecanica" text="Calcular" />
+            <Label fx:id="resultadoLabel" layoutX="177.0" layoutY="139.0" prefHeight="25.0" prefWidth="149.0" text="Label" />
+         </children>
+      </Pane>
+      <Button layoutX="16.0" layoutY="501.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="72.0" text="Volver" />
+    </children>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label alignment="CENTER" layoutX="143.0" layoutY="88.0" prefHeight="66.0" prefWidth="323.0" text="MECHANICAL">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Label>
-   </children>
 </AnchorPane>

@@ -1,0 +1,7 @@
+
+Es la energia asociada a uncuerpo con la posicion que tiene con respecto a un sistema
+de referencia, la posicion es la altura,
+
+La energia potencial gravitatoria es igual a la fueza que actua sobre el cuerpo y a distancia que
+va a recorrer cuya formula es: Ep=m*g*h
+

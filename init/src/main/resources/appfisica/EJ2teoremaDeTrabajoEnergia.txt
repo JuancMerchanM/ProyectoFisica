@@ -1,0 +1,1 @@
+Una caja de 10 kilogramos, que inicialmente se encuentra en reposo, es sometida a una fuerza horizontal constante de 50N a lo largo de un pasillo. Dado un coeficiente de fricción cinética entre la caja y el piso de 0.1, determine la velocidad de la caja después de recorrer 4 metros.

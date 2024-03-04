@@ -13,13 +13,17 @@ import java.io.IOException;
  */
 public class App extends Application {
 
-    private static Scene scene;
+    @SuppressWarnings("exports")
+    public static Scene scene;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("startMenu"), 640, 480);
+    public void start(@SuppressWarnings("exports") Stage stage) throws IOException {
+        scene = new Scene(loadFXML("startMenu"));
+        
         scene.getStylesheets().add(App.class.getResource("styleMenuStart.css").toExternalForm());
         stage.setScene(scene);
+        stage.setTitle("MENU!");
+        stage.setMaximized(true);
         stage.show();
     }
 

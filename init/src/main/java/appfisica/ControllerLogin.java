@@ -7,16 +7,21 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.Node;
 import javafx.fxml.Initializable;
 
 public class ControllerLogin implements Initializable{
     
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
+
     @FXML
     Button kineticEnergy;
     @FXML
@@ -54,19 +59,26 @@ public class ControllerLogin implements Initializable{
         exit.getStyleClass().add("custom-button");
     }
 
-    public void changeSceneKineticEnergy(ActionEvent event) throws IOException{
+    public void changeSceneKineticEnergy() throws IOException{
         App.setRoot("kineticEnergyScene");
+        App.scene.getStylesheets().clear();
+        App.scene.getStylesheets().add(App.class.getResource("energiaCineticaStyle.css").toExternalForm());
     }
 
-    public void changeScenePotentialEnergy(ActionEvent event) throws IOException{
+    public void changeScenePotentialEnergy() throws IOException{
         App.setRoot("potentialEnergyScene");
+        App.scene.getStylesheets().clear();
+        //App.scene.getStylesheets().add(App.class.getResource("energiaCineticaStyle.css").toExternalForm());
     }
 
-    public void changeSceneMechanicalEnergy(ActionEvent event) throws IOException{
+    public void changeSceneMechanicalEnergy() throws IOException{
         App.setRoot("mechanicalEnergyScene");
+        App.scene.getStylesheets().clear();
+        //App.scene.getStylesheets().add(App.class.getResource("energiaCineticaStyle.css").toExternalForm());
     }
 
-    public void exitApp(ActionEvent event) throws IOException{
+
+    public void exitApp( ) throws IOException{
         System.exit(0);
     }
 }

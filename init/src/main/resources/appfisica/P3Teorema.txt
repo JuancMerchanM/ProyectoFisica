@@ -1,0 +1,6 @@
+El teorema de la energía cinética se aplica en situaciones donde se quiere determinar cómo cambia la velocidad o la energía cinética de un objeto debido al trabajo realizado sobre él. Puede ser utilizado para analizar el movimiento de objetos en diversas situaciones, como:
+
+Movimiento de un objeto sobre una superficie horizontal o inclinada.
+Movimiento vertical de un objeto bajo la influencia de la gravedad.
+Colisiones entre objetos.
+Movimiento de objetos sujetos a fuerzas no conservativas, como la fricción.

@@ -1,0 +1,1 @@
+Esta asociada al movimiento de un objeto. Se define como la energía que un objeto posee debido a su velocidad y masa. Cuanto más rápido se mueve un objeto y más masa tiene, mayor es su energía cinética. La energía cinética se puede calcular utilizando la fórmula:

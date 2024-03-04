@@ -1,0 +1,8 @@
+
+ La energía mecánica es la suma de la energía cinética y la energía potencial de un cuerpo o sistema.
+ Es la energía que tienen los cuerpos en movimiento, ya que depende de sus velocidades y sus masas.
+ La formula para calcular la energia mecanica es:
+
+ Em= K + U   donde U es la energia potencial y K la energia cinetica.
+
+
