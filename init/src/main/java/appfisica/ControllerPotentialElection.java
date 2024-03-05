@@ -1,25 +1,19 @@
 package appfisica;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 public class ControllerPotentialElection implements Initializable {
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
+    @FXML
+    AnchorPane fondoPotencia;
 
     @FXML
     Button EnergiaPotencialGravitatoria;
@@ -44,12 +38,26 @@ public class ControllerPotentialElection implements Initializable {
         EnergiaPotencialGravitatoria.getStyleClass().add("custom-button");
         EnergiaPotencialElastica.getStyleClass().add("custom-button");
         Retroceder.getStyleClass().add("custom-button");
+        fondoPotencia.getStyleClass().add("fondoPotencia");
     }
 
     public void changePotentialGravity() throws IOException{
         App.setRoot("PotentialGravityEnergyScene");
         App.scene.getStylesheets().clear();
         //App.scene.getStylesheets().add(App.class.getResource("energiaCineticaStyle.css").toExternalForm());
+    }
+    public void changePotentialElastic() throws IOException{
+        App.setRoot("potentialElasticEnergy");
+        App.scene.getStylesheets().clear();
+        App.scene.getStylesheets().add(App.class.getResource("energiaCineticaStyle.css").toExternalForm());
+    }
+
+    // CARGAR ESCENA DE MENU
+    public void goBack() throws IOException {
+        App.setRoot("startMenu");
+        App.scene.getStylesheets().clear();
+        // SE REESTABLECE EL STYLE.
+        App.scene.getStylesheets().add(App.class.getResource("styleMenuStart.css").toExternalForm());
     }
 
 

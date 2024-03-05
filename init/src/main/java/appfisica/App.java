@@ -22,7 +22,8 @@ public class App extends Application {
         
         scene.getStylesheets().add(App.class.getResource("styleMenuStart.css").toExternalForm());
         stage.setScene(scene);
-        stage.setTitle("MENU!");
+        stage.setTitle("EnercCalc Pro");
+        stage.setResizable(false);
         stage.setMaximized(true);
         stage.show();
     }

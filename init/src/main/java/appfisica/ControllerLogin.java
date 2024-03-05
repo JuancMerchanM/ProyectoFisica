@@ -4,22 +4,24 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import javafx.scene.Node;
 import javafx.fxml.Initializable;
 
 public class ControllerLogin implements Initializable{
-    
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
+    @FXML
+    AnchorPane fondo;
 
 
     @FXML
@@ -30,7 +32,6 @@ public class ControllerLogin implements Initializable{
     Button mechanicalEnergy;
     @FXML
     Button exit;
-
     @FXML
     VBox kineticBox;
     @FXML
@@ -38,25 +39,29 @@ public class ControllerLogin implements Initializable{
     @FXML
     VBox mechanicalBox;
     @FXML
-    VBox exitBox;    
+    VBox exitBox;  
+
+    @FXML
+    Label title;
+
+      
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        /*Image imageButton = new Image(getClass().getResourceAsStream("imageButton.png"), 150, 50, false, true);
-        BackgroundImage backgroundImageButton = new BackgroundImage(
-            imageButton,BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-            BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
-        Background background = new Background(backgroundImageButton);
+        Image image = new Image(App.class.getResourceAsStream("fondoStart.jpg"));
+        BackgroundImage backgroundImage = new BackgroundImage(image,
+                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+        Background background = new Background(backgroundImage);
+        fondo.setBackground(background);
 
-        kineticBox.setBackground(background);
-        potentialBox.setBackground(background);
-        mechanicalBox.setBackground(background);
-        exitBox.setBackground(background);*/
 
+        title.getStyleClass().add("my_label");
         kineticEnergy.getStyleClass().add("custom-button");
         potentialEnergy.getStyleClass().add("custom-button");
         mechanicalEnergy.getStyleClass().add("custom-button");
         exit.getStyleClass().add("custom-button");
+        
     }
 
     public void changeSceneKineticEnergy() throws IOException{
@@ -68,7 +73,7 @@ public class ControllerLogin implements Initializable{
     public void changeScenePotentialEnergy() throws IOException{
         App.setRoot("potentialEnergyScene");
         App.scene.getStylesheets().clear();
-        //App.scene.getStylesheets().add(App.class.getResource("energiaCineticaStyle.css").toExternalForm());
+        App.scene.getStylesheets().add(App.class.getResource("styleMenuStart.css").toExternalForm());
     }
 
     public void changeSceneMechanicalEnergy() throws IOException{

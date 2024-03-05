@@ -113,8 +113,8 @@ public class ControllerKineticEnergy implements Initializable {
         choiceBoxFuerza.getItems().addAll(unidadesDisponiblesFuerza);
 
         // BASICS
-        vBoxContentScroll.setPrefHeight(2000);
-        vBoxContentScroll.setPadding(new Insets(10));
+        vBoxContentScroll.setPrefHeight(1550);
+        vBoxContentScroll.setPadding(new Insets(5));
         scrollPaneContent.autosize();
 
         // AJUSTAR A TAMAÑO NECESARIO
@@ -160,19 +160,43 @@ public class ControllerKineticEnergy implements Initializable {
             alert.setHeaderText("Error al ingresar valores");
             alert.setContentText("Por favor, ingrese valores numéricos válidos.");
             alert.showAndWait();
+            return;
         }
         //CONVERSIONES
-        if (choiceBoxMasa.getValue().equals("Gramos(g)")) {
-            masa = masa * (1/1000);
+        if (choiceBoxMasa.getValue() == null) {
+
+        } else {
+            String unidadMasa = choiceBoxMasa.getValue().toString();
+            if (unidadMasa.equals("Gramos(g)")) {
+                masa = masa * (1.0/1000.0);
+            }
         }
-        if (choiceBoxVelocidad.getValue().equals("Kilometro/Hora(km/h)")) {
-            velocidad = velocidad * (1/3.6);
+        
+        if (choiceBoxVelocidad.getValue() == null) {
+
+        } else {
+            String unidadVelocidad = choiceBoxVelocidad.getValue().toString();
+            if (unidadVelocidad.equals("Kilometro/Hora(km/h)")) {
+                velocidad = velocidad * (1.0/3.6);
+            }
         }
-        if (choiceBoxDistancia.getValue().equals("Kilometro(km)")){
-            distancia = distancia * 1000;
+        
+        if (choiceBoxDistancia.getValue() == null) {
+
+        } else {
+            String unidadDistancia = choiceBoxDistancia.getValue().toString();
+            if (unidadDistancia.equals("Kilometro(km)")) {
+                distancia = distancia * 1000;
+            }
         }
-        if (choiceBoxFuerza.getValue().equals("Libra(lb)")){
-            fuerza = fuerza * 4.44822;
+        
+        if (choiceBoxFuerza.getValue() == null) {
+
+        } else {
+            String unidadFuerza = choiceBoxFuerza.getValue().toString();
+            if (unidadFuerza.equals("Libra(lb)")) {
+                fuerza = fuerza * 4.44822;
+            }
         }
 
         double resultadoNumericoEnergiaK = (0.5) * masa * velocidad * velocidad;

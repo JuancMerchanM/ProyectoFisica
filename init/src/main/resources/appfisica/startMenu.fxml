@@ -5,27 +5,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appfisica.ControllerLogin">
+<AnchorPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appfisica.ControllerLogin">
    <children>
-      <Label alignment="TOP_CENTER" layoutY="44.0" prefHeight="20.0" prefWidth="407.0" text="EnercCalc Pro" />
-      <VBox fx:id="kineticBox" alignment="CENTER" layoutX="46.0" layoutY="113.0" prefHeight="49.0" prefWidth="322.0">
+      <Label fx:id="title" alignment="CENTER" layoutX="526.0" layoutY="60.0" prefHeight="129.0" prefWidth="374.0" text="ENERCCALC PRO" textAlignment="CENTER" />
+      <VBox fx:id="kineticBox" alignment="CENTER" layoutX="536.0" layoutY="242.0" prefHeight="50.0" prefWidth="320.0">
          <children>
-            <Button fx:id="kineticEnergy" mnemonicParsing="false" onAction="#changeSceneKineticEnergy" prefHeight="65.0" prefWidth="321.0" text="Energia cinetica" />
+            <Button fx:id="kineticEnergy" mnemonicParsing="false" onAction="#changeSceneKineticEnergy" prefHeight="50.0" prefWidth="320.0" text="Energia cinetica" />
          </children>
       </VBox>
-      <VBox fx:id="potentialBox" alignment="CENTER" layoutX="32.0" layoutY="190.0" prefHeight="49.0" prefWidth="342.0">
+      <VBox fx:id="potentialBox" alignment="CENTER" layoutX="543.0" layoutY="332.0" prefHeight="50.0" prefWidth="320.0">
          <children>
-            <Button fx:id="potentialEnergy" mnemonicParsing="false" onAction="#changeScenePotentialEnergy" prefHeight="63.0" prefWidth="356.0" text="Energia potencial" />
+            <Button fx:id="potentialEnergy" mnemonicParsing="false" onAction="#changeScenePotentialEnergy" prefHeight="50.0" prefWidth="320.0" text="Energia potencial" />
          </children>
       </VBox>
-      <VBox fx:id="mechanicalBox" alignment="CENTER" layoutX="31.0" layoutY="264.0" prefHeight="49.0" prefWidth="342.0">
+      <VBox fx:id="mechanicalBox" alignment="CENTER" layoutX="546.0" layoutY="419.0" prefHeight="50.0" prefWidth="320.0">
          <children>
-            <Button fx:id="mechanicalEnergy" mnemonicParsing="false" onAction="#changeSceneMechanicalEnergy" prefHeight="58.0" prefWidth="354.0" text="Energia mecanica" />
+            <Button fx:id="mechanicalEnergy" mnemonicParsing="false" onAction="#changeSceneMechanicalEnergy" prefHeight="50.0" prefWidth="320.0" text="Energia mecanica" />
          </children>
       </VBox>
-      <VBox fx:id="exitBox" alignment="CENTER" layoutX="115.0" layoutY="378.0" prefHeight="63.0" prefWidth="186.0">
+      <VBox fx:id="exitBox" alignment="CENTER" layoutX="551.0" layoutY="515.0" prefHeight="50.0" prefWidth="320.0">
          <children>
-            <Button fx:id="exit" mnemonicParsing="false" onAction="#exitApp" prefHeight="43.0" prefWidth="115.0" text="Salir" />
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#exitApp" prefHeight="50.0" prefWidth="120.0" text="Salir" />
          </children>
       </VBox>
    </children>

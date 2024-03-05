@@ -68,42 +68,30 @@ public class ControllerPotentialElastic implements Initializable {
     @FXML
     Label parrafo1Definicion;
     @FXML
-    ImageView energiaCineticaFormula;
+    ImageView energiaPotencialElasticaFormula;
     @FXML
-    Label parrafo2DescripcionRelacion;
+    Label tituloDeformacion;
     @FXML
-    Label tituloTeorema;
+    Label parrafo2DescripcionLeyHooke;
     @FXML
-    Label teoremaEnergiaTrabajo;
-    @FXML
-    ImageView teoremaFormulas;
-    @FXML
-    Label tituloEjemplo;
-    @FXML
-    Label ej1;
-    @FXML
-    ImageView solucion1GuiaVisual;
+    ImageView leyHooke;
+    
     @FXML
     ImageView solucionEjemplo1;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // CARGAR NODOS/ARCHIVOS
-        title.setText("Energía Cinética");
+        title.setText("Energía potenial elástica.");
 
         // ENERGIA
-        parrafo1Definicion.setText(leerArchivoTexto("P1definicionEnergiaCinetica.txt"));
-        energiaCineticaFormula.setImage(new Image(App.class.getResourceAsStream("EnergiaCineticaFormula.jpg")));
-        parrafo2DescripcionRelacion.setText(leerArchivoTexto("P2OpcionalDescripcionRelacion.txt"));
+        parrafo1Definicion.setText(leerArchivoTexto("P1DescripcionEnergiaPotencialElastica.txt"));
+        energiaPotencialElasticaFormula.setImage(new Image(App.class.getResourceAsStream("energiaPotencialElasticaFormula.png")));
 
-        // TEOREMA
-        tituloTeorema.setText("Teorema de trabajo-energía");
-        teoremaEnergiaTrabajo.setText(leerArchivoTexto("P3Teorema.txt"));
-        teoremaFormulas.setImage(new Image(App.class.getResourceAsStream("FormulasTeoremaEnergia.png")));
-        tituloEjemplo.setText("Ejemplo.");
-        ej1.setText(leerArchivoTexto("EJ2teoremaDeTrabajoEnergia.txt"));
-        solucion1GuiaVisual.setImage(new Image(App.class.getResourceAsStream("ImagenGuiaSolucion1.png")));
-        solucionEjemplo1.setImage(new Image(App.class.getResourceAsStream("SolucionEjemplo1.png")));
+        //DEFORMACION
+        tituloDeformacion.setText("Deformación del resorte (x)");
+        parrafo2DescripcionLeyHooke.setText(leerArchivoTexto("P2EnergiaPotencialElastica.txt"));
+        leyHooke.setImage(new Image(App.class.getResourceAsStream("formulaLeyHooke.png")));
 
 
         //RVIEW INFORMACION
@@ -114,7 +102,7 @@ public class ControllerPotentialElastic implements Initializable {
         choiceBoxFuerza.getItems().addAll(unidadesDisponiblesFuerza);
 
         // BASICS
-        vBoxContentScroll.setPrefHeight(2000);
+        vBoxContentScroll.setPrefHeight(600);
         vBoxContentScroll.setPadding(new Insets(10));
         scrollPaneContent.autosize();
 
@@ -137,7 +125,7 @@ public class ControllerPotentialElastic implements Initializable {
 
     // CARGAR ESCENA DE MENU
     public void goBack() throws IOException {
-        App.setRoot("startMenu");
+        App.setRoot("potentialEnergyScene");
         App.scene.getStylesheets().clear();
         // SE REESTABLECE EL STYLE.
         App.scene.getStylesheets().add(App.class.getResource("styleMenuStart.css").toExternalForm());
@@ -163,14 +151,22 @@ public class ControllerPotentialElastic implements Initializable {
             alert.showAndWait();
         }
         //CONVERSIONES
-        if (choiceBoxDeformacionResorte.getValue().equals("Kilometro(km)")) {
-            deformacionResorte = deformacionResorte * 1000;
+        if (choiceBoxDeformacionResorte.getValue() == null) {
+
+        } else {
+            String unidadDeformacionResorte = choiceBoxDeformacionResorte.getValue().toString();
+            if (unidadDeformacionResorte.equals("Kilometro(km)")) {
+                deformacionResorte = deformacionResorte * 1000;
+            }
         }
-        if (choiceBoxDeformacionResorteK.getValue().equals("Kilometro(km)")) {
-            deformacionResorteK = deformacionResorteK * 1000;
-        }
-        if (choiceBoxFuerza.getValue().equals("Libra(lb)")){
-            fuerza = fuerza * 4.44822;
+        
+        if (choiceBoxDeformacionResorteK.getValue() == null) {
+
+        } else {
+            String unidadDeformacionResorteK = choiceBoxDeformacionResorteK.getValue().toString();
+            if (unidadDeformacionResorteK.equals("Kilometro(km)")) {
+                deformacionResorteK = deformacionResorteK * 1000;
+            }
         }
 
         double resultadoNumericoEnergiaElastica = (0.5) * constante * deformacionResorte * deformacionResorte;

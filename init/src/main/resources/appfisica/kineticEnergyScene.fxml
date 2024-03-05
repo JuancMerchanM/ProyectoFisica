@@ -15,15 +15,15 @@
    <children>
       <VBox layoutX="166.0" layoutY="32.0" prefHeight="148.0" prefWidth="1003.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="TOP_CENTER" prefHeight="86.0" prefWidth="1003.0">
                <children>
                   <Label alignment="CENTER" prefHeight="32.0" prefWidth="109.0" text="Masa" />
                   <TextField fx:id="ingresarMasa" prefHeight="35.0" prefWidth="156.0" text="0.0" />
-                  <ChoiceBox fx:id="choiceBoxMasa" prefHeight="38.0" prefWidth="172.0" />
+                  <ChoiceBox fx:id="choiceBoxMasa" prefHeight="37.0" prefWidth="188.0" />
                   <VBox prefHeight="200.0" prefWidth="100.0" />
                   <Label prefHeight="38.0" prefWidth="64.0" text="Fuerza" />
                   <TextField fx:id="ingresarFuerza" prefHeight="35.0" prefWidth="153.0" text="0.0" />
-                  <ChoiceBox fx:id="choiceBoxFuerza" prefHeight="77.0" prefWidth="178.0" />
+                  <ChoiceBox fx:id="choiceBoxFuerza" prefHeight="37.0" prefWidth="191.0" />
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -40,13 +40,13 @@
                   <ChoiceBox fx:id="choiceBoxDistancia" prefHeight="40.0" prefWidth="180.0" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="102.0" prefWidth="593.0">
+            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1003.0">
                <children>
                   <Label alignment="CENTER" prefHeight="39.0" prefWidth="154.0" text="Energía cinética: " />
-                  <Label fx:id="energiaCineticaCalculo" prefHeight="37.0" prefWidth="51.0" text="0" />
+                  <Label fx:id="energiaCineticaCalculo" prefHeight="31.0" prefWidth="93.0" text="0" />
                   <VBox prefHeight="51.0" prefWidth="360.0" />
                   <Label prefHeight="23.0" prefWidth="111.0" text="Trabajo" />
-                  <Label prefHeight="33.0" prefWidth="75.0" text="0" />
+                  <Label fx:id="trabajoCalculo" prefHeight="27.0" prefWidth="78.0" text="0" />
                </children>
             </HBox>
          </children>
@@ -58,7 +58,7 @@
       </VBox>
       <VBox alignment="TOP_CENTER" layoutX="40.0" layoutY="229.0" prefHeight="532.0" prefWidth="1253.0">
          <children>
-            <ScrollPane fx:id="scrollPaneContent" focusTraversable="false" hbarPolicy="NEVER" hmax="500.0" hvalue="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="446.0" prefWidth="1253.0" vbarPolicy="ALWAYS" vmax="1500.0" vvalue="1.0">
+            <ScrollPane fx:id="scrollPaneContent" focusTraversable="false" hbarPolicy="NEVER" hmax="500.0" hvalue="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="430.0" prefWidth="1252.0" vbarPolicy="ALWAYS" vmax="1500.0" vvalue="1.0">
                <content>
                   <VBox fx:id="vBoxContentScroll" alignment="TOP_CENTER" fillWidth="false" prefHeight="491.0" prefWidth="1238.0">
                      <children>
