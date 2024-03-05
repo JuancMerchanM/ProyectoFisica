@@ -21,7 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
-public class ControllerKineticEnergy implements Initializable {
+public class ControllerPotentialElastic implements Initializable {
 
     // BASICS
     @FXML
@@ -35,33 +35,32 @@ public class ControllerKineticEnergy implements Initializable {
 
     // TEXTFIELD
     @FXML
-    TextField ingresarMasa;
+    TextField ingresarConstante;
     @FXML
-    TextField ingresarVelocidad;
+    TextField ingresarDeformacionResorte;
     @FXML
     TextField ingresarFuerza;
     @FXML
-    TextField ingresarDistancia;
+    TextField ingresarDeformacionResorteK;
 
 
     // CHOICE BOX
-    String[] unidadesDisponiblesMasa = { "Kilogramos(Kg)", "Gramos(g)" };
-    String[] unidadesDisponiblesVelocidad = { "Kilometro/Hora(km/h)", "Metro/Segundo(m/s)" };
+    String[] unidadesDisponiblesConstante = { "Newtons/metro(N/m)" };
     String[] unidadesDisponiblesFuerza = { "Newton(N)", "Libra(lb)" };
     String[] unidadesDisponiblesDistancia = { "Kilometro(km)", "Metro(m)" };
     @FXML
-    ChoiceBox<String> choiceBoxMasa;
+    ChoiceBox<String> choiceBoxConstante;
     @FXML
-    ChoiceBox<String> choiceBoxVelocidad;
+    ChoiceBox<String> choiceBoxDeformacionResorte;
     @FXML
     ChoiceBox<String> choiceBoxFuerza;
     @FXML
-    ChoiceBox<String> choiceBoxDistancia;
+    ChoiceBox<String> choiceBoxDeformacionResorteK;
 
     @FXML
-    Label energiaCineticaCalculo;
+    Label energiaPotencialElastica;
     @FXML
-    Label trabajoCalculo;
+    Label constanteResorte;
 
     // INFORMACION
     @FXML
@@ -106,10 +105,12 @@ public class ControllerKineticEnergy implements Initializable {
         solucion1GuiaVisual.setImage(new Image(App.class.getResourceAsStream("ImagenGuiaSolucion1.png")));
         solucionEjemplo1.setImage(new Image(App.class.getResourceAsStream("SolucionEjemplo1.png")));
 
+
+        //RVIEW INFORMACION
         // ESTABLECER OPCIONES CHOICEBOX
-        choiceBoxMasa.getItems().addAll(unidadesDisponiblesMasa);
-        choiceBoxVelocidad.getItems().addAll(unidadesDisponiblesVelocidad);
-        choiceBoxDistancia.getItems().addAll(unidadesDisponiblesDistancia);
+        choiceBoxConstante.getItems().addAll(unidadesDisponiblesConstante);
+        choiceBoxDeformacionResorte.getItems().addAll(unidadesDisponiblesDistancia);
+        choiceBoxDeformacionResorteK.getItems().addAll(unidadesDisponiblesDistancia);
         choiceBoxFuerza.getItems().addAll(unidadesDisponiblesFuerza);
 
         // BASICS
@@ -144,15 +145,15 @@ public class ControllerKineticEnergy implements Initializable {
 
     // CALCULOS
     public void realizarOperaciones() {
-        Double velocidad = 0.0;
-        Double masa = 0.0;
+        Double constante = 0.0;
+        Double deformacionResorte = 0.0;
         Double fuerza = 0.0;
-        Double distancia = 0.0;
+        Double deformacionResorteK = 0.0;
         try {
-            velocidad = Double.parseDouble(ingresarVelocidad.getText());
-            masa = Double.parseDouble(ingresarMasa.getText());
+            constante = Double.parseDouble(ingresarConstante.getText());
+            deformacionResorte = Double.parseDouble(ingresarDeformacionResorte.getText());
             fuerza = Double.parseDouble(ingresarFuerza.getText());
-            distancia = Double.parseDouble(ingresarDistancia.getText());
+            deformacionResorteK = Double.parseDouble(ingresarDeformacionResorteK.getText());
 
         } catch (Exception e) {
             Alert alert = new Alert(AlertType.ERROR);
@@ -162,27 +163,23 @@ public class ControllerKineticEnergy implements Initializable {
             alert.showAndWait();
         }
         //CONVERSIONES
-        if (choiceBoxMasa.getValue().equals("Gramos(g)")) {
-            masa = masa * (1/1000);
+        if (choiceBoxDeformacionResorte.getValue().equals("Kilometro(km)")) {
+            deformacionResorte = deformacionResorte * 1000;
         }
-        if (choiceBoxVelocidad.getValue().equals("Kilometro/Hora(km/h)")) {
-            velocidad = velocidad * (1/3.6);
-        }
-        if (choiceBoxDistancia.getValue().equals("Kilometro(km)")){
-            distancia = distancia * 1000;
+        if (choiceBoxDeformacionResorteK.getValue().equals("Kilometro(km)")) {
+            deformacionResorteK = deformacionResorteK * 1000;
         }
         if (choiceBoxFuerza.getValue().equals("Libra(lb)")){
             fuerza = fuerza * 4.44822;
         }
 
-        double resultadoNumericoEnergiaK = (0.5) * masa * velocidad * velocidad;
-        double resultadoNumericoTrabajo = fuerza * distancia;
+        double resultadoNumericoEnergiaElastica = (0.5) * constante * deformacionResorte * deformacionResorte;
+        double resultadoNumericoConstante = fuerza * deformacionResorteK;
 
         DecimalFormat df = new DecimalFormat("#.##"); 
-        String resultadoEnergiaK = df.format(resultadoNumericoEnergiaK);
-        String resultadoTrabajo = df.format(resultadoNumericoTrabajo);
-        energiaCineticaCalculo.setText(resultadoEnergiaK + " J");
-        trabajoCalculo.setText(resultadoTrabajo + " J");
-
+        String resultadoEnergiaElastica = df.format(resultadoNumericoEnergiaElastica);
+        String resultadoConstante = df.format(resultadoNumericoConstante);
+        energiaPotencialElastica.setText(resultadoEnergiaElastica + " J");
+        constanteResorte.setText(resultadoConstante + " N/m");
     }
 }
