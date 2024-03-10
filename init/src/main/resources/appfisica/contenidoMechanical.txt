@@ -1,8 +1,34 @@
 
  La energía mecánica es la suma de la energía cinética y la energía potencial de un cuerpo o sistema.
- Es la energía que tienen los cuerpos en movimiento, ya que depende de sus velocidades y sus masas.
+ La energia mecanica consiste en la energia relacionada con su movimiento mas la energia relacionada
+ con su posicion.Cuanta mas velocidad tiene un cuerpo mas alta es su energia cinetica y cuanto mas
+ alta es su posicion mas energia potencial tiene, en consecuencia mayor es su energia mecanica.
+ Tambien se debe tener en cuenta que la energia cinetica se puede transformar en energia potencial
+ por ejemplo una montaña rusa disminuye su altura ganando velocidad.
  La formula para calcular la energia mecanica es:
 
- Em= K + U   donde U es la energia potencial y K la energia cinetica.
+ Em= K + U
+ Donde U es la energia potencial la cual es la energia asociada a la localizacion
+ de un cuerpo dentro de un campo de fuerzas y K la energia cinetica la cual es la energia asociada al
+ movimiento de un objeto.
+
+ OBSERVACION: Tener en cuenta que la energia mecanica de un sistema se conserva si no hay fuerzas no
+ conservativas  las cuales realizen un trabajo sobre el sistema. Esto se
+ le conoce como principio de conservacion de la mecanica.
+ Las fuerzas no conservativas son aquellas cuyo trabajo depende del trayecto, estas son fuerzas
+ disipativas, debido a que disipan energia:Asi que la energia mecanica de un sistema es despues
+ que actua la fuerza no conservativa.
+
+LA LEY DE LA CONSERVACION
+ La ley de la conservación de la energía mecánica dice que la energía mecánica es constante cuando
+  todas las fuerzas del sistema son conservativas, la suma de la energía
+  cinética inicial más la energía potencial inicial es igual a la suma de la energía cinética
+  final más la energía potencial final.
+  La formula de esta ley puede dercribirse como:
+   Ec +Ep = Ecf + Epf
+
+
+
+
 
 

@@ -14,12 +14,12 @@
          <children>
             <VBox fx:id="gravitBox" alignment="CENTER" prefHeight="122.0" prefWidth="1324.0">
                <children>
-                  <Button fx:id="EnergiaPotencialGravitatoria" mnemonicParsing="false" onAction="#changePotentialGravity" prefHeight="92.0" prefWidth="510.0" text="Energia Potencial Gravitatoria" />
+                  <Button fx:id="EnergiaPotencialGravitatoria" mnemonicParsing="false" onAction="#changePotentialGravedad" prefHeight="92.0" prefWidth="510.0" text="Energía Potencial Gravitatoria" />
                </children>
             </VBox>
             <VBox fx:id="ElasticBox" alignment="CENTER" prefHeight="118.0" prefWidth="1324.0">
                <children>
-                  <Button fx:id="EnergiaPotencialElastica" mnemonicParsing="false" onAction="#changePotentialElastic" prefHeight="85.0" prefWidth="528.0" text="Energia Potencial Elastica" />
+                  <Button fx:id="EnergiaPotencialElastica" mnemonicParsing="false" onAction="#changePotentialElastic" prefHeight="85.0" prefWidth="528.0" text="Energía Potencial Elástica" />
                </children>
             </VBox>
             <VBox fx:id="lastBox" alignment="CENTER" prefHeight="117.0" prefWidth="1324.0">

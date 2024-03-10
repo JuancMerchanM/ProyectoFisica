@@ -8,9 +8,12 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -32,6 +35,14 @@ public class ControllerMechanicalEnergy implements Initializable{
 
     @FXML
     private Label resultadoLabel;
+    @FXML
+    private Button lastButton;
+    @FXML
+    private Button calcular;
+
+    @FXML
+    private ImageView imagen1;
+
 
     @FXML
     private Label contentLabel1 = new Label();
@@ -40,13 +51,16 @@ public class ControllerMechanicalEnergy implements Initializable{
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        Label title = new Label("Energia Mecanica");
+        Label title = new Label("Energía Mecánica");
         String contenidoS = leerArchivoTexto("contenidoMechanical.txt");
+
+
         contentLabel1.setText(contenidoS);
         contentLabels.add(title);
         contentLabels.add(contentLabel1);
         contentLabel1.setWrapText(true);
         title.setWrapText(true);
+        imagen1.setImage(new Image(App.class.getResourceAsStream("energiaMecanicaEJEM.PNG")));
         vBoxContentScroll.getChildren().setAll(contentLabels);
         //vBoxContentScroll.setPrefHeight(1000);
         //scrollPaneContent.autosize();
@@ -65,11 +79,19 @@ public class ControllerMechanicalEnergy implements Initializable{
         return contenido.toString();
     }
 
+    // CARGAR ESCENA DE MENU
+    public void goBack() throws IOException {
+        App.setRoot("startMenu");
+        App.scene.getStylesheets().clear();
+        // SE REESTABLECE EL STYLE.
+        App.scene.getStylesheets().add(App.class.getResource("styleMenuStart.css").toExternalForm());
+    }
+
     @FXML
     private void calcularEnergiaMecanica() {
 
 
-        double potential=Double.parseDouble(potentialTextField.getText());
+        double potential = Double.parseDouble(potentialTextField.getText());
         double kinetic = Double.parseDouble(kineticTextField.getText());
 
         double mechanical=kinetic + potential;

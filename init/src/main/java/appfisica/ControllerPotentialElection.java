@@ -41,7 +41,7 @@ public class ControllerPotentialElection implements Initializable {
         fondoPotencia.getStyleClass().add("fondoPotencia");
     }
 
-    public void changePotentialGravity() throws IOException{
+    public void changePotentialGravedad() throws IOException{
         App.setRoot("PotentialGravityEnergyScene");
         App.scene.getStylesheets().clear();
         //App.scene.getStylesheets().add(App.class.getResource("energiaCineticaStyle.css").toExternalForm());

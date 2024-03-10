@@ -1,7 +1,17 @@
 
 Es la energia asociada a uncuerpo con la posicion que tiene con respecto a un sistema
-de referencia, la posicion es la altura,
+de referencia, la posicion es la altura. . Cuando un objeto se encuentra a cierta altura sobre la superficie
+de la Tierra,  adquiere energía potencial gravitatoria debido a la atracción gravitatoria entre el objeto y la tierra
+u otro cuerpo celeste dependiendo el sistema de medida.
 
 La energia potencial gravitatoria es igual a la fueza que actua sobre el cuerpo y a distancia que
-va a recorrer cuya formula es: Ep=m*g*h
+va a recorrer cuya formula es:
+ Ep=m*g*h
 
+La energia potencial gravitatoria se vuelve energia cinetica cuendo el objeto cae libremente. Esta transformacion
+es evidente a la conservacion de la materia,que establece que la energía total de un sistema cerrado se conserva, lo
+que significa que la suma de la energía cinética y la energía potencial se mantiene constante a menos que haya una
+transferencia de energía con el entorno
+
+El campo gravitatorio es el area de influencia de un objeto masivo donde otros objetos experimentan una fuerza
+gravitatoria.La intensiad de este campo permita calcular la energia potencial gravitatoria.

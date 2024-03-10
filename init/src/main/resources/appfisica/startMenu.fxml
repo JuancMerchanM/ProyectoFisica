@@ -10,17 +10,17 @@
       <Label fx:id="title" alignment="CENTER" layoutX="526.0" layoutY="60.0" prefHeight="129.0" prefWidth="374.0" text="ENERCCALC PRO" textAlignment="CENTER" />
       <VBox fx:id="kineticBox" alignment="CENTER" layoutX="536.0" layoutY="242.0" prefHeight="50.0" prefWidth="320.0">
          <children>
-            <Button fx:id="kineticEnergy" mnemonicParsing="false" onAction="#changeSceneKineticEnergy" prefHeight="50.0" prefWidth="320.0" text="Energia cinetica" />
+            <Button fx:id="kineticEnergy" mnemonicParsing="false" onAction="#changeSceneKineticEnergy" prefHeight="50.0" prefWidth="320.0" text="Energía cinética" />
          </children>
       </VBox>
       <VBox fx:id="potentialBox" alignment="CENTER" layoutX="543.0" layoutY="332.0" prefHeight="50.0" prefWidth="320.0">
          <children>
-            <Button fx:id="potentialEnergy" mnemonicParsing="false" onAction="#changeScenePotentialEnergy" prefHeight="50.0" prefWidth="320.0" text="Energia potencial" />
+            <Button fx:id="potentialEnergy" mnemonicParsing="false" onAction="#changeScenePotentialEnergy" prefHeight="50.0" prefWidth="320.0" text="Energía potencial" />
          </children>
       </VBox>
       <VBox fx:id="mechanicalBox" alignment="CENTER" layoutX="546.0" layoutY="419.0" prefHeight="50.0" prefWidth="320.0">
          <children>
-            <Button fx:id="mechanicalEnergy" mnemonicParsing="false" onAction="#changeSceneMechanicalEnergy" prefHeight="50.0" prefWidth="320.0" text="Energia mecanica" />
+            <Button fx:id="mechanicalEnergy" mnemonicParsing="false" onAction="#changeSceneMechanicalEnergy" prefHeight="50.0" prefWidth="320.0" text="Energía mecánica" />
          </children>
       </VBox>
       <VBox fx:id="exitBox" alignment="CENTER" layoutX="551.0" layoutY="515.0" prefHeight="50.0" prefWidth="320.0">
