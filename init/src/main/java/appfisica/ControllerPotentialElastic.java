@@ -61,6 +61,18 @@ public class ControllerPotentialElastic implements Initializable {
     Label energiaPotencialElastica;
     @FXML
     Label constanteResorte;
+    @FXML
+    Label constante;
+    @FXML
+    Label defromacion1;
+    @FXML
+    Label deformacion2;
+    @FXML
+    Label fuerza;
+    @FXML
+    Label indicadorEnergiaPotencial;
+    @FXML
+    Label indicadorConstante;
 
     // INFORMACION
     @FXML

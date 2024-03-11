@@ -59,9 +59,21 @@ public class ControllerKineticEnergy implements Initializable {
     ChoiceBox<String> choiceBoxDistancia;
 
     @FXML
+    Label energiaCinetica;
+    @FXML
+    Label trabajo;
+    @FXML
     Label energiaCineticaCalculo;
     @FXML
     Label trabajoCalculo;
+    @FXML
+    Label masa;
+    @FXML
+    Label velocidad;
+    @FXML
+    Label distancia;
+    @FXML
+    Label fuerza;
 
     // INFORMACION
     @FXML

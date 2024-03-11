@@ -17,11 +17,11 @@
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="73.0" prefWidth="134.0" text="Constante elástica" />
+                  <Label fx:id="constante" alignment="CENTER" prefHeight="73.0" prefWidth="134.0" text="Constante elástica" />
                   <TextField fx:id="ingresarConstante" prefHeight="35.0" prefWidth="156.0" text="0.0" />
                   <ChoiceBox fx:id="choiceBoxConstante" prefHeight="45.0" prefWidth="199.0" />
                   <VBox prefHeight="200.0" prefWidth="100.0" />
-                  <Label prefHeight="38.0" prefWidth="64.0" text="Fuerza" />
+                  <Label fx:id="fuerza" prefHeight="38.0" prefWidth="64.0" text="Fuerza" />
                   <TextField fx:id="ingresarFuerza" prefHeight="35.0" prefWidth="153.0" text="0.0" />
                   <ChoiceBox fx:id="choiceBoxFuerza" prefHeight="58.0" prefWidth="190.0" />
                </children>
@@ -31,21 +31,21 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="158.0" text="Deformación resorte" />
+                  <Label fx:id="defromacion1" alignment="CENTER" prefHeight="50.0" prefWidth="158.0" text="Deformación resorte" />
                   <TextField fx:id="ingresarDeformacionResorte" prefHeight="37.0" prefWidth="154.0" text="0.0" />
                   <ChoiceBox fx:id="choiceBoxDeformacionResorte" prefHeight="37.0" prefWidth="177.0" />
                   <VBox prefHeight="49.0" prefWidth="55.0" />
-                  <Label prefHeight="49.0" prefWidth="125.0" text="Deformación resorte" />
+                  <Label fx:id="deformacion2" prefHeight="49.0" prefWidth="125.0" text="Deformación resorte" />
                   <TextField fx:id="ingresarDeformacionResorteK" prefHeight="35.0" prefWidth="153.0" text="0.0" />
                   <ChoiceBox fx:id="choiceBoxDeformacionResorteK" prefHeight="40.0" prefWidth="180.0" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="102.0" prefWidth="593.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="236.0" text="Energía potencial elástica:" />
+                  <Label fx:id="indicadorEnergiaPotencial" alignment="CENTER" prefHeight="47.0" prefWidth="236.0" text="Energía potencial elástica:" />
                   <Label fx:id="energiaPotencialElastica" prefHeight="52.0" prefWidth="87.0" text="0" />
                   <VBox prefHeight="51.0" prefWidth="263.0" />
-                  <Label prefHeight="43.0" prefWidth="216.0" text="Constante elástica del resorte:" />
+                  <Label fx:id="indicadorConstante" prefHeight="43.0" prefWidth="216.0" text="Constante elástica del resorte:" />
                   <Label fx:id="constanteResorte" prefHeight="57.0" prefWidth="102.0" text="0" />
                </children>
             </HBox>
